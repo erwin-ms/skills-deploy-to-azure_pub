@@ -9,9 +9,9 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - staging-workflow
+      - staging-workflow_pub
     paths:
-      - .github/workflows/deploy-staging.yml
+      - .github/workflows/deploy-staging_pub.yml
 
 permissions:
   # Need `contents: read` to checkout the repository.
@@ -69,4 +69,4 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           from_step: 1
           to_step: 2
-          branch_name: staging-workflow
+          branch_name: staging-workflow_pub
